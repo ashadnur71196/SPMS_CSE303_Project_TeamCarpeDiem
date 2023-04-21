@@ -105,49 +105,74 @@
 
 
 /* addgrade */
-.addgrade label{
-    font-size: 20px;
-    padding: 6px;
+.grade {
+    font-family: Arial, sans-serif;
+    margin: 10vh auto;
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #ccc;
     border-radius: 5px;
+    background-color: #b6f4e7;
+    margin-bottom: 10px;
+  }
+.grade h1{
     text-align: center;
     font-weight: 600;
-    border: none!important;
-    margin-left: 30px;
-    margin-right: 9px;
-    background-color: aquamarine;
-
-}
-
-.grade{
-    margin-top: 80px;
-
-
-}
-
-
-.addgrade input{
-    margin-left: 10px;
-}
-
-.addgrade select{
-    margin-left: 10px;
-    border: none!important;
-}
-
-.mybtn{
-    margin-left: 370px;
-    padding: 0 20px 0 20px;
-    margin-top: 50px;
+    text-decoration-style: solid;
     margin-bottom: 20px;
-    border: none!important;
-    border-radius: 5px;
-    padding: 15px;
-    font-size: 25px;
-    font-weight: 600;
-    width: 250px!important;
-    text-align: center;
-    
 }
+.subgrade{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 
+  }
+  
+  label {
+    margin: 10px 5% 3% 5%;
+    display: flex;
+    flex-direction: column;
+    font-weight: 600;
+  }
+  
+  input,
+  .myselect {
+    padding: 5px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid #4d4a4a;
+  }
+  
+  .myselect {
+    appearance: auto;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="16" height="16"><path fill="%23ccc" d="M4.5 5L8 8.5l3.5-3.5H4.5z"/></svg>')
+      no-repeat right #fff;
+    background-size: 12px 12px;
+    padding-right: 20px;
+    width: 100%;
+  }
+  
+  button[type='submit'] {
+    background-color: #1748b3;
+    color: #fff;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button[type='submit']:hover {
+    background-color: #52b055;
+    font-weight: 600;
+  }
+  
+  input:focus,
+  select:focus {
+    outline: none;
+    border: 1px solid #4caf50;
+  }
+  
 
 

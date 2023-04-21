@@ -5,6 +5,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { FaUser, FaLock } from 'react-icons/fa'
 import { Form, Button } from 'react-bootstrap'
 import { useNavigate } from 'react-router-dom'
+import Axios from 'axios';
 
 
 
@@ -14,10 +15,18 @@ export const Login = () => {
   const navigate = useNavigate();
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(userid, password);
-    if(userid === 'admin' && password === 'admin'){
-      navigate('/faculty/dashboard');
-    }
+    Axios.post('http://localhost:3002/login', {
+      userID: parseInt(userid),
+      password: password
+    }).then((response) => {
+      console.log(response);
+      if (response.data.length > 0) {
+        navigate('/faculty/dashboard');
+      }
+      else {
+        alert('Wrong username/password combination!');
+      }
+    })
     
   }
 
