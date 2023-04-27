@@ -5,6 +5,11 @@ import App from './App';
 import Login from './pages/Login';
 import reportWebVitals from './reportWebVitals';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { setGlobal } from 'reactn';
+
+setGlobal({
+  user: [],
+});
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(

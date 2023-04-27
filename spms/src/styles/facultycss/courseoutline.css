@@ -148,6 +148,16 @@
     padding: 20px;
     
   }
+  .tempdiv{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin:20px;
+    padding: 20px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;  
+  }
 
   .my-title{
     display: flex;

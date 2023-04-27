@@ -117,7 +117,6 @@
 }
 #myfooter {
   opacity: 0;
-  display: none;
 }
 .nav a::after {
   content: "";
@@ -318,6 +317,7 @@ span {
     width: 100%;
   }
   #myfooter {
+    opacity: 1!important;
     position: fixed;
     bottom: 0;
     width: 22%;
@@ -482,6 +482,7 @@ span {
     width: 100%;
   }
   #myfooter {
+    opacity: 1!important;
     position: fixed;
     bottom: 0;
     width: 22%;
@@ -645,6 +646,7 @@ span {
   width: 100%;
 }
 #myfooter {
+  opacity: 1!important;
   position: fixed;
   bottom: 0;
   width: 15%;

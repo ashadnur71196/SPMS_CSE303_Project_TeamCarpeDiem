@@ -283,44 +283,31 @@ const AddCourseO = () => {
 
 
       
-      // axios.post("http://localhost:3002/courseoutline/create",{
-      //   courseoutline: courseoutline
-      // });
+      axios.post("http://localhost:3002/courseoutline/create",{
+        courseoutline: courseoutline
+      });
       axios.post("http://localhost:3002/clomatrix/create",{
         courseCode: courseCode,
         cloMatrix: cloMatrix
       });
       
-      // axios.post("http://localhost:3002/boomsleaarninglevel/create",{
-      //   courseCode: courseCode,
-      //   boomsLeaarningLevel: boomsLeaarningLevel
-      // }).then((response) => {
-      //   console.log(response);
-      // }
-      // );
-      // axios.post("http://localhost:3002/lessonplan/create",{
-      //   courseCode: courseCode,
-      //   lessonplan: lessonplan
-      // }).then((response) => {
-      //   console.log(response);
-      // }
-      // );
-      // axios.post("http://localhost:3002/assesment/create",{
-      //   courseCode: courseCode,
-      //   assessment: assessment
-      // }).then((response) => {
-      //   console.log(response);
-      // }
-      // );
-      // axios.post("http://localhost:3002/coursecontent/create",{
-      //   courseCode: courseCode,
-      //   formData: formData
-      // }).then((response) => {
-      //   console.log(response);
-      // }
-      // );
-      
-      
+      axios.post("http://localhost:3002/boomsleaarninglevel/create",{
+        courseCode: courseCode,
+        boomsLeaarningLevel: boomsLeaarningLevel
+      });
+      axios.post("http://localhost:3002/lessonplan/create",{
+        courseCode: courseCode,
+        lessonplan: lessonplan
+      });
+      axios.post("http://localhost:3002/assesment/create",{
+        courseCode: courseCode,
+        assessment: assessment
+      });
+      axios.post("http://localhost:3002/coursecontent/create",{
+        courseCode: courseCode,
+        formData: formData
+      });
+      alert("Course Outline Created");       
     }
  
   };
@@ -333,7 +320,9 @@ const AddCourseO = () => {
             <div className="sub-content">
               <label>
                 Course Code:
-                <input type="text" value={courseCode} onChange={(e) => setCourseCode(e.target.value)} />
+                <input type="text" value={courseCode} onChange={(e) => setCourseCode(
+                  e.target.value.replace(/\s+/g, '').toUpperCase()
+                )} />
               </label>
               <label>
                 Course Title:
@@ -444,7 +433,7 @@ const AddCourseO = () => {
                     <th>CO Description</th>
                     <th className="subrow">
                       <tr className="fullrow">
-                        <th >Bloom's Leaarning Level</th>
+                        <th >Bloom's Learning Level</th>
                       </tr>
                       <tr>
                         <th className="minicell">C</th>

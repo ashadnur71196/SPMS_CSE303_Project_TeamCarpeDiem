@@ -65,7 +65,7 @@ function Facultynav() {
   return (
     <>
       <div className="myheader">
-        <h1>Hello MR.X </h1>
+        <h1> </h1>
       </div>
       <div className="nav-container">
         <button className="nav-toggle" aria-label="Toggle navigation" onClick={handleNavToggle}>

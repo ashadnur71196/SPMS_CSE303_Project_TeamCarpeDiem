@@ -145,7 +145,6 @@ const AddGrade = () => {
                   <option value="W">W</option>
                 </select>
               </label>
-              <br />
             </div>
             <div className="subgrade">
               <button type="submit">Submit</button>
