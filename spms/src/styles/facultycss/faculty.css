@@ -226,6 +226,17 @@
     border-radius: 5px;
     border: 1px solid #4d4a4a;
   }
+
+  .viewQues{
+    font-family: Arial, sans-serif;
+    margin: 10vh auto;
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
   
   .myselect {
     appearance: auto;

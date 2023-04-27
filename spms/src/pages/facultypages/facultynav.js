@@ -11,9 +11,11 @@ import { FaPlus } from 'react-icons/fa';
 import { FaBook } from 'react-icons/fa';
 import { BiLogOut } from 'react-icons/bi';
 
+import {getGlobal} from 'reactn';
+
 
 function Facultynav() {
-
+  const user = getGlobal().user;
   const [isNavOpen, setIsNavOpen] = useState(false);
 
   const handleNavToggle = () => {
@@ -65,7 +67,13 @@ function Facultynav() {
   return (
     <>
       <div className="myheader">
-        <h1> </h1>
+        <h1> {
+          user.f_name?
+          user.f_name + " " + user.l_name
+          :
+          null
+          }
+           </h1>
       </div>
       <div className="nav-container">
         <button className="nav-toggle" aria-label="Toggle navigation" onClick={handleNavToggle}>

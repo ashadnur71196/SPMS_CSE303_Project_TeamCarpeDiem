@@ -14,7 +14,7 @@ export function Faculty() {
         {user.facultyID ? (
           <div className="dash">
             <img src={user.image} alt="profile" className="mypic" />
-            <h1>{user.f_name + " " + user.l_name}!</h1>
+            <h1>{user.f_name + " " + user.l_name}</h1>
             <h3> {user.rank}</h3>
             <h3>Department Of {user.departmentID.toUpperCase()}</h3>
             <h3>Independent University, Bangladesh</h3>
@@ -29,9 +29,9 @@ export function Faculty() {
             {user.studentID ? (
               <div className="dash">
                 <h1>Welcome to SPMS!</h1>
-                <h1>{user.f_name + " " + user.l_name}!</h1>
+                <h1>{user.f_name + " " + user.l_name}</h1>
                 <h3>
-                  {user.studentID} | {user.departmentID.toUpperCase()}
+                  {user.studentID} || {user.departmentID.toUpperCase()}
                 </h3>
                 <h3>Independent University, Bangladesh</h3>
                 {user.email == null ? (
